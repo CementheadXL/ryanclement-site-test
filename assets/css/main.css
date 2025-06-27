@@ -1,6 +1,12 @@
 @import url("fontawesome-all.min.css");
 @import url("https://fonts.googleapis.com/css?family=Lato:400,400italic,700,700italic|Source+Code+Pro:400");
-
+:root {
+    --primary-color: #1A3E7A;       /* Dark Blue */
+    --secondary-color: #3E7AB7;     /* Medium Blue */
+    --accent-color: #F4B400;        /* Golden Yellow */
+    --background-color: #FFFFFF;    /* Light background */
+    --text-color: #333333;
+}
 /*
 	Read Only by HTML5 UP
 	html5up.net | @ajlkn
@@ -116,15 +122,13 @@ input, select, textarea {
 	}
 
 		a:hover {
-			border-bottom-color: transparent;
-			color: #4acaa8 !important;
-		}
-
+    border-bottom-color: transparent;
+    color: var(--accent-color) !important;
+}
 	strong, b {
-		color: #777;
-		font-weight: 700;
-	}
-
+    color: var(--primary-color);
+    font-weight: 700;
+}
 	em, i {
 		font-style: italic;
 	}
@@ -134,11 +138,11 @@ input, select, textarea {
 	}
 
 	h1, h2, h3, h4, h5, h6 {
-		color: #777;
-		font-weight: 700;
-		line-height: 1em;
-		margin: 0 0 0.5625em 0;
-	}
+    color: var(--primary-color);
+    font-weight: 700;
+    line-height: 1em;
+    margin: 0 0 0.5625em 0;
+}
 
 		h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 			border: 0;
@@ -1785,7 +1789,7 @@ input, select, textarea {
 	}
 
 	header.major h2 {
-		color: #4acaa8;
+		color: var(--primary-color);
 		font-size: 3.5em;
 	}
 
@@ -1848,7 +1852,7 @@ input, select, textarea {
 		input[type="email"]:focus,
 		select:focus,
 		textarea:focus {
-			border-color: #4acaa8;
+			border-color: var(--primary-color);
 		}
 
 	select {
@@ -1953,7 +1957,7 @@ input, select, textarea {
 
 		input[type="checkbox"]:focus + label:before,
 		input[type="radio"]:focus + label:before {
-			border-color: #4acaa8;
+			border-color: var(--primary-color);
 		}
 
 	input[type="checkbox"] + label:before {
@@ -2402,7 +2406,7 @@ input, select, textarea {
 			}
 
 			ul.feature-icons li:before {
-				background: #4acaa8;
+				background: var(--primary-color);
 				border-radius: 100%;
 				color: #ffffff;
 				display: block;
@@ -2615,27 +2619,26 @@ input, select, textarea {
 			}
 
 		input[type="submit"].primary,
-		input[type="reset"].primary,
-		input[type="button"].primary,
-		.button.primary {
-			background-color: #4acaa8;
-			color: #ffffff !important;
-		}
+input[type="reset"].primary,
+input[type="button"].primary,
+.button.primary {
+	background-color: var(--primary-color);
+	color: #ffffff !important;
+}
 
-			input[type="submit"].primary:hover,
-			input[type="reset"].primary:hover,
-			input[type="button"].primary:hover,
-			.button.primary:hover {
-				background-color: #5ed0b1;
-			}
+input[type="submit"].primary:hover,
+input[type="reset"].primary:hover,
+input[type="button"].primary:hover,
+.button.primary:hover {
+	background-color: var(--secondary-color);
+}
 
-			input[type="submit"].primary:active,
-			input[type="reset"].primary:active,
-			input[type="button"].primary:active,
-			.button.primary:active {
-				background-color: #39c29d;
-			}
-
+input[type="submit"].primary:active,
+input[type="reset"].primary:active,
+input[type="button"].primary:active,
+.button.primary:active {
+	background-color: var(--accent-color);
+}
 		input[type="submit"].disabled, input[type="submit"]:disabled,
 		input[type="reset"].disabled,
 		input[type="reset"]:disabled,
@@ -2653,10 +2656,11 @@ input, select, textarea {
 /* Features */
 
 	.features article {
-		border-top: solid 3px #f4f4f4;
-		margin-bottom: 2.25em;
-		padding-top: 2.25em;
-	}
+    border-top: solid 3px var(--secondary-color);  /* Medium Blue border */
+    margin-bottom: 2.25em;
+    padding-top: 2.25em;
+}
+
 
 		.features article:first-child {
 			border-top: 0;
@@ -2700,7 +2704,7 @@ input, select, textarea {
 		-webkit-justify-content: space-between;
 		-ms-justify-content: space-between;
 		justify-content: space-between;
-		background: #4acaa8;
+		background: var(--primary-color);
 		color: #d2f2e9;
 		height: 100%;
 		overflow-y: auto;
@@ -2774,6 +2778,10 @@ input, select, textarea {
 				#header > footer .icons li a {
 					color: #b7eadc;
 				}
+				
+				#header > footer .icons li a:hover {
+    color: var(--accent-color) !important;
+}
 
 		#header > nav {
 			-moz-flex-grow: 1;
@@ -2789,7 +2797,8 @@ input, select, textarea {
 			}
 
 				#header > nav ul li {
-					border-top: solid 2px #5ccfb1;
+    border-top: solid 2px var(--secondary-color);
+}
 					display: block;
 					padding: 0;
 				}
@@ -2807,10 +2816,9 @@ input, select, textarea {
 					}
 
 						#header > nav ul li a.active {
-							background: #fff;
-							color: #4acaa8 !important;
-						}
-
+	background: #fff;
+	color: var(--primary-color) !important;
+}
 					#header > nav ul li:first-child {
 						border-top: 0;
 					}
@@ -2825,8 +2833,9 @@ input, select, textarea {
 /* Main */
 
 	#main > section {
-		border-top: solid 6px #f4f4f4;
-	}
+    border-top: solid 6px var(--primary-color);
+}
+
 
 		#main > section > .container {
 			padding: 6em 0 4em 0;
@@ -2869,6 +2878,22 @@ input, select, textarea {
 				#footer .copyright li a {
 					color: inherit;
 				}
+
+/* Header background */
+#header {
+    background: var(--primary-color);
+}
+
+/* Active Nav */
+#header > nav ul li a.active {
+    background: #fff;
+    color: var(--primary-color) !important;
+}
+
+/* Footer icon hover */
+#header > footer .icons li a:hover {
+    color: var(--accent-color) !important;
+}
 
 /* XLarge */
 
@@ -3030,7 +3055,7 @@ input, select, textarea {
 				top: 0;
 				width: 100%;
 				z-index: 10001;
-				background: #222;
+				background: var(--primary-color);
 				color: #fff;
 				min-width: 320px;
 			}
@@ -3076,7 +3101,7 @@ input, select, textarea {
 					}
 
 					#titleBar .toggle:before {
-						background: #4acaa8;
+						background: var(--primary-color);
 						color: #ffffff;
 						content: '\f0c9';
 						display: block;
@@ -3325,4 +3350,86 @@ input, select, textarea {
     width: 100%;
     height: auto;
     display: block;
+}
+#four .testimonial-slider {
+  margin-top: 2em;
+}
+
+#four .card {
+  background: #fff;
+  padding: 2em;
+  border-radius: 1.5em;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
+  margin-bottom: 3em;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+#four .card:not(:last-child)::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: #ddd;
+  position: absolute;
+  bottom: -1.5em;
+  left: 0;
+}
+
+#four .quote-author {
+  margin-top: 1.2em;
+  font-style: normal;
+}
+
+#four .quote-author strong {
+  display: inline;
+  color: var(--primary-color);
+  font-size: 1em;
+}
+
+#four .quote-author span {
+  display: inline;
+  font-style: italic;
+  font-weight: normal;
+  color: #777;
+  margin-left: 0.3em;
+}
+#four h3,
+#four .section-heading {
+  text-align: left;
+  margin-bottom: 2em;
+}
+#three h3.section-heading {
+  text-align: left;
+  margin-bottom: 2em;
+}
+
+#three .features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2em;
+}
+
+#three .card {
+  background: #fff;
+  padding: 2em;
+  border-radius: 1.5em;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
+  transition: transform 0.3s ease;
+}
+
+#three .card:hover {
+  transform: translateY(-4px);
+}
+
+#three .card h4 {
+  margin-top: 0;
+  color: var(--primary-color);
+}
+
+#three p {
+  text-align: left;
+}
+#three {
+  margin-bottom: 5em; /* adds space between sections */
 }
