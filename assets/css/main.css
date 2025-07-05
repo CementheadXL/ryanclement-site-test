@@ -3437,3 +3437,33 @@ input[type="button"].primary:active,
   list-style: none;
   padding-left: 0;
 }
+@media screen and (max-width: 736px) {
+  /* Global reset for video container */
+.video-container {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+  border: none;
+  background: #000;
+  margin-bottom: 2rem;
+}
+
+/* Remove header spacing on blog page */
+body.blog #header {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+/* Remove any gap at top of wrapper on blog page */
+body.blog #wrapper {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+}
+
+/* Optional: override default wrapper style2 section spacing */
+body.blog .wrapper.style2:first-of-type {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+}
+.video-container {
+  background: #000; /* or your dark blue */
+}
